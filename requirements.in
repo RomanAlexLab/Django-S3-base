@@ -1,0 +1,6 @@
+Django==5.2.3
+dotenv==0.9.9
+pillow==11.2.1
+boto3==1.38.46
+django-storages[s3]==1.14.6
+django-csp==4.0

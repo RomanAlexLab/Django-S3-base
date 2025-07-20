@@ -1,0 +1,197 @@
+/* static/admin/mod/admin.css */
+
+/* Вся область экрана */
+#FullSpceMediaModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+    font-size: 1rem;
+}
+
+/* Раздел кнопки закрытия модального окна */
+#FullSpceMediaModal .line-btn-close {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* Кнопка закрытия */
+#FullSpceMediaModal .btn-close {
+    font-size: 2.0rem;
+    width: 2.0rem;
+    height: 2.0rem;
+    margin-top: 0.2em;
+    margin-right: 0.8em;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 0px solid #ccc;
+    color: #333;
+    border-radius: 50%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 100000;
+    box-shadow: 0 0.2em 0.8em rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease;
+}
+
+#FullSpceMediaModal .btn-close:hover {
+    color: #000;
+    background-color: #fff;
+    box-shadow: 0 0.2em 1.2em rgba(0, 0, 0, 0.5);
+}
+
+/* Раздел контента */
+#FullSpceMediaModal .line-content {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Навигация */
+#FullSpceMediaModal .media-left-nav {
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: 100000;
+}
+#FullSpceMediaModal .media-right-nav {
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 100000;
+}
+
+#FullSpceMediaModal .media-nav {
+    height: 100%;
+    font-size: 4rem;
+    background: none;
+    border: none;
+    padding: 0.5em;
+    cursor: pointer;
+    color: #fff;
+    user-select: none;
+}
+
+#FullSpceMediaModal .left-nav {
+    margin-left: 0;
+}
+
+#FullSpceMediaModal .right-nav {
+    margin-right: 0;
+}
+
+/* Модальное окно */
+#FullSpceMediaModal .custom-media-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 80vh;
+    width: 70%;
+    max-width: 70%;
+    box-sizing: border-box;
+}
+
+#FullSpceMediaModal .modal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #fff;
+    padding: 0;
+    border-radius: 0.5em;
+    box-shadow: 0 0.4em 1.2em rgba(0, 0, 0, 0.2);
+    overflow: auto;
+    text-align: center;
+    z-index: 1;
+    color: #000;
+}
+
+#FullSpceMediaModal img,
+#FullSpceMediaModal video {
+    max-height: 70vh;
+    max-width: 100%;
+    display: block;
+    margin: 0;
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+}
+
+/* Текст и ссылки */
+#FullSpceMediaModal .modal-text-filename,
+#FullSpceMediaModal .no-filetype {
+    display: inline-block;
+    color: black;
+    margin: 0;
+    padding: 0.5em;
+    font-size: 1.3rem;
+    font-weight: bold;
+    word-break: break-word;
+    max-width: 40vw;
+}
+
+#FullSpceMediaModal a {
+    display: inline-block;
+    margin: 0;
+    padding: 0.5em;
+    max-width: 90%;
+    color: blue;
+    font-size: 1.5rem;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+    word-break: break-word;
+    max-width: 40vw;
+}
+
+#FullSpceMediaModal a:visited {
+    color: purple;
+}
+
+#FullSpceMediaModal a:hover {
+    color: darkblue;
+    text-decoration: none;
+}
+
+#FullSpceMediaModal a:active {
+    color: red;
+}
+
+/* ======================= */
+/* Адаптивные медиазапросы */
+/* ======================= */
+
+@media (max-width: 600px) {
+    #FullSpceMediaModal .btn-close {
+        font-size: 2.0rem;
+        width: 2.0rem;
+        height: 2.0rem;
+    }
+
+    #FullSpceMediaModal .modal-text-filename,
+    #FullSpceMediaModal .no-filetype {
+        font-size: 1.5rem;
+    }
+
+    #FullSpceMediaModal a {
+        font-size: 1.5rem;
+    }
+}

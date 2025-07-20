@@ -1,0 +1,25 @@
+{% extends "admin/change_list.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block extrahead %}
+  {{ block.super }}
+  <link rel="stylesheet" href="{% static 'admin/mod/css/admin.css' %}">
+  <script src="{% static 'admin/mod/js/admin.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+  <div class="module">
+    <form method="get" action="" style="display:inline;">
+      <label for="limit">Показать</label>
+      <select name="limit" id="limit" onchange="this.form.submit()">
+        {% for size in page_sizes %}
+          <option value="{{ size }}" {% if size == selected_limit %}selected{% endif %}>{{ size }}</option>
+        {% endfor %}
+      </select>
+      <span>записей</span>
+    </form>
+    {{ block.super }}
+  </div>
+{% endblock %}
+

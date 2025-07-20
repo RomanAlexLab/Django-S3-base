@@ -1,0 +1,28 @@
+# Migrations
+**/migrations/*
+!**/migrations/__init__.py
+
+# Byte-compiled / optimized / DLL files
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+**/venv/
+
+# Logs and databases
+**/logs/
+*.log
+*.sqlite3
+
+# Archive
+**/del/
+**/delete/
+**/archive/
+
+# Other
+**/.vscode/
+
+# Environment variables
+#.env

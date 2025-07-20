@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+    <h1 class="text-primary">Тест bootstrap: подгрузка статических файлов и js</h1>
+    <p>Если текст синий — CSS загрузился.</p>
+    <button onclick="alert('Bootstrap JS работает')" class="btn btn-success">Нажми меня</button>
+{% endblock %}
