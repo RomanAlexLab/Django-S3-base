@@ -455,7 +455,7 @@ class CustomS3Storage(S3Storage):
         
         # Проверка расширения файла
         file_ext = Path(name).suffix.lower()
-        if file_ext not in S3Data.ALLOWED_FILE_EXTENSIONS:
+        if file_ext not in G_ALL_FILE_TYPES:
             logger.error(f"Файл {name} имеет недопустимое расширение {file_ext}.")
             raise ValueError(f"Расширение {file_ext} не разрешено для загрузки.")
 
